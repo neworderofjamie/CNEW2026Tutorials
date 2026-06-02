@@ -27,6 +27,7 @@ GeNN also has a reasonably comprehensive set of documentation to help you availa
 Unlike real brains, it's very easy to access the state of simulated neurons so, to get started, let's plot some stuff!
 
 - Plot some neuron variables, e.g. one of the Kenyon Cells.
+  
   Hints:
     - Any variables of the running model reside on the GPU, you need to pull
       them to main memory to inspect or manipulate them:
@@ -70,10 +71,6 @@ Doing something slightly more realistic is probably not going to help the alread
 **Task 2 — Swarm of flies**
 
 Similarly to when you run 'normal' ANN on GPUs, batching can really speed up SNNs when you use GeNN. See how much faster batching makes inference with this model.
+
 Hints:
     - One of our [other tutorials](https://genn-team.github.io/genn/documentation/5/tutorials/mnist_inference/tutorial_3.html) does something very similar with a simpler model.
-
-**Bonus task**
-
-Run this model on a neuromorphic chip
-
