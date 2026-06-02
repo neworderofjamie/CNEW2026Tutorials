@@ -11,9 +11,9 @@ This tutorial is part of a [series](https://genn-team.github.io/genn/documentati
 ## 2026 CNEW TUTORIALS
 
 ## Tutorial — Training an SNN classifier inspired by the insect mushroom body
-
-[**Training collab:**](https://colab.research.google.com/github/genn-team/genn/blob/master/docs/tutorials/mushroom_body/4_third_layer.ipynb)
-[**Testing collab:**](https://colab.research.google.com/github/genn-team/genn/blob/master/docs/tutorials/mushroom_body/5_testing.ipynb)
+This tutorial is based around two Google collab notebooks. 
+The [**Training collab**](https://colab.research.google.com/github/genn-team/genn/blob/master/docs/tutorials/mushroom_body/4_third_layer.ipynb) lets you train models on the MNIST training set and save the weights to your Google Drive.
+The [**Testing collab**](https://colab.research.google.com/github/genn-team/genn/blob/master/docs/tutorials/mushroom_body/5_testing.ipynb) loads these weights and evaluates the model on the MNIST test set.
 
 This morning, I spoke about how insects use a brain region called the mushroom body for visual learning. 
 In this tutorial I'm going to demonstrate our GeNN SNN simulator by building a simple Mushroom Body and training it on MNIST (just like real insects do!)
@@ -62,9 +62,18 @@ Doing something slightly more realistic is probably not going to help the alread
 
 1. Uncomment the ``//addToPost(g);`` line in the STDP rule so these plastic synapses actually inject currents
 2. Build a Winner-take-All network between the MBON neurons. 
-    ![A simple Winner Take All network](images/wta.webp)
     - MBONs will need to excite inhibitory interneuron(s)
     - Inhibitory interneuron(s) will need to inhibit all MBONs
-    
 
+![A simple Winner Take All network](images/wta.webp)
+    
+**Task 2 — Swarm of flies**
+
+Similarly to when you run 'normal' ANN on GPUs, batching can really speed up SNNs when you use GeNN. See how much faster batching makes inference with this model.
+Hints:
+    - One of our [other tutorials](https://genn-team.github.io/genn/documentation/5/tutorials/mnist_inference/tutorial_3.html) does something very similar with a simpler model.
+
+**Bonus task**
+
+Run this model on a neuromorphic chip
 
