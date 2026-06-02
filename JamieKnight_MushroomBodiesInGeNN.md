@@ -51,6 +51,7 @@ Unlike real brains, it's very easy to access the state of simulated neurons so, 
 
 - Plot how the weight g of a few of the plastic synapses between the changes
   over time during learning.
+  
   Hints:
     - There is already code in the notebook how to access the ``g`` values
     - Access them periodically and save them into a list
